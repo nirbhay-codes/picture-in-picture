@@ -28,6 +28,7 @@ body {
   - 5th: spread: how far out the shadow spreads. if -ve it reduces the spread. 
   - 6th: rgba */
   box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+  display: flex;
 }
 
 .button {
@@ -37,12 +38,12 @@ body {
   /* prevents teh button to turn blue if clicked. */
   outline: none;
 
-  width: 120px;
+  width: 180px;
   height: 75px;
 
   /* The font-family property is set for the button and not for the button-container because for buttons we need to specifically add the font-family at the button level (not button container) */
   font-family: Barlow, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
 
   /* similar to box-shadow. 1st: horizontal, 2nd: vertical, 3rd: blur, 4th: color */
@@ -57,6 +58,8 @@ body {
   /* 2nd box-shadow: outside of the button on the bottom */
   box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.4),
     0 12px 12px 0 rgba(0, 0, 0, 0.3);
+
+  margin: 15px;
 }
 
 button:hover {
