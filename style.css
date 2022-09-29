@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(37, 37, 37);
+}
+
+.button-container {
+  border: 2px solid black;
+
+  /* padding causes a blank space between the border and the button element itself */
+  padding: 10px;
+  border-radius: 7px;
+
+  /* Below box-shadow settings give it a 3D look
+  - 1st: inset causes the shadow to fall inside the element rather than outside. 
+  - 2nd: 0 is horizontal offset; 
+  - 3rd: 20px is vertical offset; 
+  - 4th: blur, i.e how solid or not solid the color is. 4 px is small amt of blur, no value would have been a solid color with no blur; 
+  - 5th: spread: how far out the shadow spreads. if -ve it reduces the spread. 
+  - 6th: rgba */
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+}
+
+.button {
+  /* mouse pointer turns into a hand symbol */
+  cursor: pointer;
+
+  /* prevents teh button to turn blue if clicked. */
+  outline: none;
+
+  width: 120px;
+  height: 75px;
+
+  /* The font-family property is set for the button and not for the button-container because for buttons we need to specifically add the font-family at the button level (not button container) */
+  font-family: Barlow, sans-serif;
+  font-size: 25px;
+  color: white;
+
+  /* similar to box-shadow. 1st: horizontal, 2nd: vertical, 3rd: blur, 4th: color */
+  text-shadow: 0 2px 5px black;
+
+  /* here we specify the 1st: direction of the gradient; 2nd: 1st color; 3rd: 2nd color */
+  background: linear-gradient(to top, #696969, #575757);
+
+  border: 2px solid black;
+  border-radius: 7px;
+
+  /* 2nd box-shadow: outside of the button on the bottom */
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.4),
+    0 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #696969, #575757);
+}
+
+button:active {
+  transform: translateY(3px);
+
+  /* The 12px shadow of the button are halved to 6px. The shadow is being reduced when the button is pressed and pushed down 3px. This is to make it seem like the button is actually being pressed. */
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
